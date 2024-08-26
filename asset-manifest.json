@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/europa-super-league/static/css/main.2dd6629d.css",
+    "main.js": "/europa-super-league/static/js/main.8e42be1a.js",
+    "static/js/453.c3416d37.chunk.js": "/europa-super-league/static/js/453.c3416d37.chunk.js",
+    "static/media/mancity.png": "/europa-super-league/static/media/mancity.e51db636b1e9e631d1cf.png",
+    "static/media/barcelona.png": "/europa-super-league/static/media/barcelona.6141eaee46096101c272.png",
+    "static/media/chelsea.png": "/europa-super-league/static/media/chelsea.f6a75ad4446ebd21f44e.png",
+    "static/media/real.png": "/europa-super-league/static/media/real.b204634798a78951b8ca.png",
+    "static/media/arsenal.png": "/europa-super-league/static/media/arsenal.1e550dc534ec885d244d.png",
+    "static/media/dortmund.png": "/europa-super-league/static/media/dortmund.35f0e1278398326c59ba.png",
+    "static/media/manutd.png": "/europa-super-league/static/media/manutd.5f327d93d3fa92e6c005.png",
+    "static/media/bayern.png": "/europa-super-league/static/media/bayern.39fb5bfccd05a1f229a8.png",
+    "static/media/bayer.png": "/europa-super-league/static/media/bayer.1b56d05b304d6f633e8e.png",
+    "static/media/psg.png": "/europa-super-league/static/media/psg.7c53532c8589df95c7ed.png",
+    "static/media/milan.png": "/europa-super-league/static/media/milan.7606eab04cab0270131c.png",
+    "static/media/liverpool.png": "/europa-super-league/static/media/liverpool.65084ca2483f669bac52.png",
+    "static/media/inter.png": "/europa-super-league/static/media/inter.75d957a44ea95956115f.png",
+    "static/media/atmadrid.png": "/europa-super-league/static/media/atmadrid.20a56bbcfb442c67d510.png",
+    "static/media/juventus.png": "/europa-super-league/static/media/juventus.d053f9408ab86e211b5c.png",
+    "index.html": "/europa-super-league/index.html",
+    "main.2dd6629d.css.map": "/europa-super-league/static/css/main.2dd6629d.css.map",
+    "main.8e42be1a.js.map": "/europa-super-league/static/js/main.8e42be1a.js.map",
+    "453.c3416d37.chunk.js.map": "/europa-super-league/static/js/453.c3416d37.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2dd6629d.css",
+    "static/js/main.8e42be1a.js"
+  ]
+}
