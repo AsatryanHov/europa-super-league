@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/europa-super-league/static/css/main.2dd6629d.css",
-    "main.js": "/europa-super-league/static/js/main.8e42be1a.js",
+    "main.css": "/europa-super-league/static/css/main.b4dd436c.css",
+    "main.js": "/europa-super-league/static/js/main.c3b03e85.js",
     "static/js/453.c3416d37.chunk.js": "/europa-super-league/static/js/453.c3416d37.chunk.js",
     "static/media/mancity.png": "/europa-super-league/static/media/mancity.e51db636b1e9e631d1cf.png",
     "static/media/barcelona.png": "/europa-super-league/static/media/barcelona.6141eaee46096101c272.png",
@@ -19,12 +19,12 @@
     "static/media/atmadrid.png": "/europa-super-league/static/media/atmadrid.20a56bbcfb442c67d510.png",
     "static/media/juventus.png": "/europa-super-league/static/media/juventus.d053f9408ab86e211b5c.png",
     "index.html": "/europa-super-league/index.html",
-    "main.2dd6629d.css.map": "/europa-super-league/static/css/main.2dd6629d.css.map",
-    "main.8e42be1a.js.map": "/europa-super-league/static/js/main.8e42be1a.js.map",
+    "main.b4dd436c.css.map": "/europa-super-league/static/css/main.b4dd436c.css.map",
+    "main.c3b03e85.js.map": "/europa-super-league/static/js/main.c3b03e85.js.map",
     "453.c3416d37.chunk.js.map": "/europa-super-league/static/js/453.c3416d37.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2dd6629d.css",
-    "static/js/main.8e42be1a.js"
+    "static/css/main.b4dd436c.css",
+    "static/js/main.c3b03e85.js"
   ]
 }
