@@ -1,0 +1,53 @@
+@import "./assets/mixins.scss";
+
+/* Hide content by default */
+// @include adaptiv-font(60, 25);
+// @include adaptiv-value(width, 50, 25, 0);
+// .App {
+//   display: none;
+// }
+
+/* Hide the landscape notice by default */
+// .landscape-notice {
+//   .landscape-notice-text {
+//     // display: none;
+//     text-align: center;
+//     padding: 20px;
+
+//     // background-color: lightyellow;
+//     // border: 1px solid #ccc;
+//     @include adaptiv-font(30, 15);
+//   }
+
+//   .landscape-notice-img {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     margin: 0 auto;
+//     width: 200px;
+//     height: 200px;
+//   }
+// }
+
+/* Show content and hide notice when the screen is in landscape mode */
+// @media only screen and (orientation: landscape) {
+//   .App {
+//     display: block;
+//     margin: 10px;
+//     // width: 1000px;
+//     // background-color: grey;
+//   }
+//   .landscape-notice {
+//     display: none;
+//   }
+// }
+
+/* Show the landscape notice and hide content when the screen is in portrait mode */
+// @media only screen and (orientation: portrait) {
+//   .landscape-notice {
+//     display: block;
+//   }
+//   .App {
+//     display: none;
+//   }
+// }

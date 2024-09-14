@@ -1,0 +1,118 @@
+import React, { useState, useEffect, useRef } from "react";
+import axios from "axios";
+
+const App = () => {
+  // List of teams with their corresponding IDs, tournament IDs, and season IDs
+  const teamDetails = [
+    //----------------------- SPAIN --------------------------------
+    // { teamId: "2817", tournamentId: "8", seasonId: "61643" }, //barcelona
+    // { teamId: "2829", tournamentId: "8", seasonId: "61643" }, //real
+    // { teamId: "2836", tournamentId: "8", seasonId: "61643" }, //at madrid
+
+    //----------------------- ITALY ------------------------------------
+    // { teamId: "2697", tournamentId: "23", seasonId: "63515" }, // inter
+    // { teamId: "2692", tournamentId: "23", seasonId: "63515" }, // milan
+    // { teamId: "2687", tournamentId: "23", seasonId: "63515" }, // juventus
+    //-------------------------- ENGLAND ----------------------------------
+    // { teamId: "42", tournamentId: "17", seasonId: "61627" }, // arsenal
+    // { teamId: "35", tournamentId: "17", seasonId: "61627" }, // man utd
+    // { teamId: "38", tournamentId: "17", seasonId: "61627" }, // chelsea
+    // { teamId: "17", tournamentId: "17", seasonId: "61627" }, // man city
+    // { teamId: "44", tournamentId: "17", seasonId: "61627" }, // liverpool
+    //----------------------- FRANCE ---------------------------------------
+    // { teamId: "1644", tournamentId: "34", seasonId: "61736" }, //psg
+    //-------------------------GERMANY-------------------------------------
+    // { teamId: "2672", tournamentId: "35", seasonId: "63516" }, // bayern
+    { teamId: "2673", tournamentId: "35", seasonId: "63516" }, // dortmund
+    // { teamId: "2681", tournamentId: "35", seasonId: "63516" }, // bayer
+
+    // Add more team details as needed
+  ];
+
+  const [consolidatedData, setConsolidatedData] = useState({});
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [allFetched, setAllFetched] = useState(false); // Track if all data is fetched
+
+  // Ref to track the current team index
+  const currentTeamIndex = useRef(0);
+  const intervalRef = useRef(null); // Ref to store interval ID
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const { teamId, tournamentId, seasonId } =
+        teamDetails[currentTeamIndex.current];
+
+      // Stop the interval if teamId is "0"
+      // if (teamId === "0") {
+      //   clearInterval(intervalRef.current);
+      //   setAllFetched(true);
+      //   return;
+      // }
+
+      const options = {
+        method: "GET",
+        url: "https://sofascore.p.rapidapi.com/teams/get-statistics",
+        params: {
+          teamId,
+          tournamentId,
+          seasonId,
+          type: "overall",
+        },
+        headers: {
+          "x-rapidapi-key":
+            "5c304a3e6cmsh2bb136896dd14b2p1b99bbjsnc3347683e549",
+          "x-rapidapi-host": "sofascore.p.rapidapi.com",
+        },
+      };
+
+      try {
+        const response = await axios.request(options);
+
+        // Update consolidated data
+        setConsolidatedData((prevData) => ({
+          ...prevData,
+          [teamId]: response.data, // Store data using teamId as the key
+        }));
+
+        // Update the index to the next team ID
+        currentTeamIndex.current =
+          (currentTeamIndex.current + 1) % teamDetails.length;
+
+        // Check if all teams' data have been fetched
+        if (currentTeamIndex.current === 0) {
+          setAllFetched(true); // All data has been fetched
+          clearInterval(intervalRef.current);
+        }
+
+        setLoading(false);
+      } catch (error) {
+        setError(error);
+        setLoading(false);
+      }
+    };
+
+    // Initial fetch
+    fetchData();
+
+    // Set up interval to fetch data every 2 seconds
+    intervalRef.current = setInterval(fetchData, 15000);
+
+    // Cleanup interval on component unmount
+    return () => clearInterval(intervalRef.current);
+  }, []); // Empty dependency array ensures this runs once when the component mounts
+
+  console.log(consolidatedData);
+  console.log(allFetched);
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
+
+  return (
+    <div>
+      <h1>Team Statistics</h1>
+      <pre>{JSON.stringify(consolidatedData, null, 2)}</pre>
+    </div>
+  );
+};
+
+export default Ap;

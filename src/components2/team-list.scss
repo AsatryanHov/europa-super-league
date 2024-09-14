@@ -1,0 +1,513 @@
+@import "./mixins.scss";
+@import "./zero.scss";
+// @import "./normalaze.scss";
+// html div {
+//   border: 1px solid black !important;
+// }
+
+.wrapper-teams {
+  margin: 0 auto;
+}
+
+.block {
+  margin: 0;
+}
+
+.block-team-logo-img {
+  object-fit: cover;
+}
+
+.block-team {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+
+.block-team-position,
+.block-team-name,
+.block-team-value,
+.block-team-rating,
+.block-team-goal-per-game,
+.block-team-missed-goal-per-game,
+.block-team-won-duels-procent,
+.block-team-big-chances,
+.block-team-big-chances-created,
+.block-team-big-chances-missed,
+.block-team-shots-on-target,
+.block-team-accurateOwnHalfPassesPercentage,
+.block-team-accurateOppositionHalfPassesPercentage,
+.block-team-avgAge,
+.block-team-averageBallPossession,
+.block-team-accuratePassesPercentage {
+  // width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // font-weight: 400;
+  // font-size: 18px;
+}
+.block-team-position {
+  // width: 30px;
+  // height: 30px;
+  // border-width: 4px;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  border-style: solid;
+  border-radius: 50%;
+  // margin-right: 100px;
+  @include adaptiv-value(border-width, 3, 1, 0);
+
+  // background-color: red;
+  // @include adaptiv-value(width, 1400, 340, 0);
+  // @include adaptiv-value(width, 1400, 340, 0);
+  width: 500px;
+}
+// .header-block-position {
+//   // background-color: orange;
+//   // margin-left: 15px;
+//   // @include adaptive(margin-left, 360px, 1200px, 3px, 15px);
+// }
+.block-team-name {
+  // width: 150px;
+  // font-size: 18px;
+  // font-weight: 700;
+  text-align: center;
+  overflow: hidden; /* Hide any content that overflows the div */
+  // text-overflow: ellipsis; /* Show an ellipsis (...) if the text is too long */
+  // white-space: nowrap; /* Prevent the text from wrapping to the next line */
+}
+.block-team-rating {
+  border-radius: 5px;
+  // font-size: 18px;
+  // font-weight: 700;
+}
+
+.block-team-logo,
+.block-team-logo-img {
+  // width: 50px;
+  // height: 50px;
+  // margin: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-block,
+.header-block-logo,
+.header-block-team,
+.header-block-logo {
+  // font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-break: break-word;
+  text-align: center;
+  // padding: 3px;
+  // font-size: 16px;
+}
+// .header-block-logo {
+//   // background-color: blue;
+//   // @include adaptiv-value(width, 45, 20, 0);
+//   // @include adaptive(width, 360px, 1200px, 5px, 15px);
+//   // @include adaptive(margin-left, 360px, 1200px, 5px, 15px);
+// }
+.header-block-logo {
+  @include adaptiv-value(width, 45, 34, 0);
+}
+
+.explanation-block {
+  // width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  font-style: italic;
+  // font-size: 13px;
+  // font-weight: 100;
+  align-items: center;
+}
+.line-between-blocks {
+  //   // width: 100vw;
+  //   // @include adaptiv-value(width, 1300, 920, 0);
+  margin: 0 auto 0 auto;
+
+  @include adaptiv-value(height, 3, 1, 0);
+
+  @include adaptiv-value(width, 1150, 320, 0);
+  // width: 500px;
+  // margin-top: 5px;
+}
+@media only screen and (min-width: 100px) and (max-width: 358px) {
+  .wrapper-teams {
+    display: none;
+  }
+}
+/* Small devices (phones, 359px and up) */
+@media only screen and (min-width: 359px) {
+  .block-team-position,
+  .block-team-name,
+  .block-team-value,
+  .block-team-rating,
+  .block-team-goal-per-game,
+  .block-team-missed-goal-per-game,
+  .block-team-won-duels-procent,
+  .block-team-big-chances,
+  .block-team-big-chances-created,
+  .block-team-big-chances-missed,
+  .block-team-shots-on-target,
+  .block-team-accurateOwnHalfPassesPercentage,
+  .block-team-accurateOppositionHalfPassesPercentage,
+  .block-team-avgAge,
+  .block-team-averageBallPossession,
+  .block-team-accuratePassesPercentage {
+    width: 40px;
+    font-weight: 400;
+    font-size: 7px;
+  }
+  .block-team-position {
+    width: 15px;
+    height: 15px;
+    // border-width: 2px;
+    padding: 0;
+    margin-right: 2px;
+  }
+  .header-block-position {
+    width: 10px;
+    height: 10px;
+    // border-width: 1px;
+    // background-color: red;
+  }
+  .block-team-name {
+    width: 60px;
+    font-size: 8px;
+    font-weight: 700;
+  }
+  .header-block-team {
+    width: 60px;
+    font-size: 5px;
+    font-weight: 700;
+    // background-color: orange;
+    // @include adaptive(width, 360px, 1200px, 5px, 15px);
+  }
+  .block-team-value {
+    font-size: 6px;
+  }
+  .block-team-rating {
+    font-size: 8px;
+    font-weight: 700;
+  }
+
+  .block-team-logo,
+  .block-team-logo-img {
+    width: 20px;
+    height: 20px;
+    // margin: 2px;
+  }
+  // .header-block-logo {
+  //   // width: 30px;
+  //   // height: auto;
+  //   // background-color: blue;
+  //   // margin: 2px;
+  //   // @include adaptive(width, 360, 759px, 45px, 45px);
+  //   // @include adaptive(width, 360, 759px, 20px, 40px);
+  // }
+  // .header-block-logo {
+  //   width: 100px;
+  // }
+
+  .header-block,
+  // .header-block-logo,
+  .header-block-team {
+    font-weight: 700;
+    padding: 3px;
+    font-size: 5px;
+  }
+
+  .explanation-block {
+    width: 80%;
+    font-size: 6px;
+    font-weight: 100;
+  }
+  // .line-between-blocks {
+  //   // @include adaptiv-value(width, 1300, 920, 0);
+  //   width: 380px;
+  // }
+}
+
+/* Small devices (phones, 450px and up) */
+@media only screen and (min-width: 450px) {
+  .block-team-position,
+  .block-team-name,
+  .block-team-value,
+  .block-team-rating,
+  .block-team-goal-per-game,
+  .block-team-missed-goal-per-game,
+  .block-team-won-duels-procent,
+  .block-team-big-chances,
+  .block-team-big-chances-created,
+  .block-team-big-chances-missed,
+  .block-team-shots-on-target,
+  .block-team-accurateOwnHalfPassesPercentage,
+  .block-team-accurateOppositionHalfPassesPercentage,
+  .block-team-avgAge,
+  .block-team-averageBallPossession,
+  .block-team-accuratePassesPercentage {
+    width: 100px;
+    font-weight: 400;
+    font-size: 10px;
+  }
+  .block-team-position {
+    width: 15px;
+    height: 15px;
+    // border-width: 4px;
+    padding: 0;
+  }
+  .header-block-position {
+    width: 15px;
+    height: 15px;
+    // border-width: 2px;
+    // background-color: red;
+  }
+  .block-team-name {
+    width: 100px;
+    font-size: 10px;
+    font-weight: 700;
+  }
+  .header-block-team {
+    width: 100px;
+    font-size: 12px;
+    font-weight: 700;
+    // background-color: orange;
+  }
+  .block-team-value {
+    font-size: 10px;
+  }
+  .block-team-rating {
+    font-size: 11px;
+    font-weight: 700;
+  }
+
+  .block-team-logo,
+  .block-team-logo-img {
+    width: 20px;
+    height: 20px;
+    // margin: 2px;
+  }
+  .header-block-logo {
+    // width: 60px;
+    height: auto; //tes poxvuma ete che hani obshi hatvacum
+    // /background-color: blue;
+    // margin: 2px;
+  }
+
+  .header-block,
+  // .header-block-logo,
+  .header-block-team {
+    font-weight: 700;
+    padding: 1px;
+    font-size: 7px;
+  }
+
+  .explanation-block {
+    width: 80%;
+    font-size: 7px;
+    font-weight: 100;
+  }
+  // .line-between-blocks {
+  //   // @include adaptiv-value(width, 1300, 920, 0);
+  //   // width: 400px;
+  // }
+}
+
+/* Medium devices (tablets, 760px and up) */
+@media only screen and (min-width: 760px) {
+  .block-team-position,
+  .block-team-name,
+  .block-team-value,
+  .block-team-rating,
+  .block-team-goal-per-game,
+  .block-team-missed-goal-per-game,
+  .block-team-won-duels-procent,
+  .block-team-big-chances,
+  .block-team-big-chances-created,
+  .block-team-big-chances-missed,
+  .block-team-shots-on-target,
+  .block-team-accurateOwnHalfPassesPercentage,
+  .block-team-accurateOppositionHalfPassesPercentage,
+  .block-team-avgAge,
+  .block-team-averageBallPossession,
+  .block-team-accuratePassesPercentage {
+    width: 70px;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .block-team-position {
+    width: 20px;
+    height: 20px;
+    // border-width: 4px;
+    padding: 0;
+  }
+  .header-block-position {
+    width: 20px;
+    height: 20px;
+    // border-width: 4px;
+    // background-color: red;
+  }
+  .block-team-name {
+    width: 120px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .header-block-team {
+    width: 120px;
+    font-size: 14px;
+    font-weight: 700;
+    // background-color: orange;
+  }
+  .block-team-value {
+    font-size: 11px;
+  }
+  .block-team-rating {
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .block-team-logo,
+  .block-team-logo-img {
+    width: 35px;
+    height: 35px;
+    // margin: 2px;
+  }
+  .header-block-logo {
+    // width: 60px;
+    @include adaptiv-value(width, 47, 47, 0);
+    height: auto; //tes poxvuma ete che hani obshi hatvacum
+    // /background-color: blue;
+    // margin: 2px;
+  }
+
+  .header-block,
+  // .header-block-logo,
+  .header-block-team {
+    font-weight: 700;
+    padding: 1px;
+    font-size: 10px;
+  }
+
+  .explanation-block {
+    width: 80%;
+    font-size: 9px;
+    font-weight: 100;
+  }
+  // .line-between-blocks {
+  //   // @include adaptiv-value(width, 1300, 920, 0);
+  //   // width: 650px;
+  // }
+}
+
+/* Large devices (desktops, 1024px and up) */
+@media only screen and (min-width: 1024px) {
+  .block-team-position,
+  .block-team-name,
+  .block-team-value,
+  .block-team-rating,
+  .block-team-goal-per-game,
+  .block-team-missed-goal-per-game,
+  .block-team-won-duels-procent,
+  .block-team-big-chances,
+  .block-team-big-chances-created,
+  .block-team-big-chances-missed,
+  .block-team-shots-on-target,
+  .block-team-accurateOwnHalfPassesPercentage,
+  .block-team-accurateOppositionHalfPassesPercentage,
+  .block-team-avgAge,
+  .block-team-averageBallPossession,
+  .block-team-accuratePassesPercentage {
+    width: 90px;
+    font-weight: 400;
+    font-size: 18px;
+  }
+  .block-team-position {
+    width: 30px;
+    height: 30px;
+    // border-width: 4px;
+    padding: 0;
+  }
+  .header-block-position {
+    // width: 40px;
+    @include adaptiv-value(width, 33, 33, 0);
+    height: auto;
+    // border-width: 4px;
+  }
+  .block-team-name {
+    width: 140px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .header-block-team {
+    width: 140px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .block-team-value {
+    font-size: 15px;
+  }
+  .block-team-rating {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .block-team-logo,
+  .block-team-logo-img {
+    width: 45px;
+    height: 45px;
+    // margin: 2px;
+  }
+  .header-block-logo {
+    // width: 65px;
+    @include adaptiv-value(width, 49, 47, 0);
+    height: auto; //tes poxvuma ete che hani obshi hatvacum
+
+    // margin: 2px;
+  }
+
+  .header-block,
+  // .header-block-logo,
+  .header-block-team {
+    font-weight: 700;
+    padding: 1px;
+    font-size: 13px;
+  }
+
+  .explanation-block {
+    width: 80%;
+    font-size: 12px;
+    font-weight: 100;
+  }
+  // .line-between-blocks {
+  //   // @include adaptiv-value(width, 1300, 920, 0);
+  //   // width: 950px;
+  // }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+// @media only screen and (min-width: 1200px) {
+// }
+
+@media only screen and (min-width: 1450px) {
+  .line-between-blocks {
+    max-width: 1280px;
+
+    // @include adaptiv-value(width, 1000, 320, 0);
+    // width: 500px;
+    // margin-top: 5px;
+  }
+  .explanation-block {
+    max-width: 1280px;
+  }
+}
+
+// @import "./phone-portret-size.scss";
+// @import "./phone-landscape-size.scss";
+// @import "./desktopSize.scss";

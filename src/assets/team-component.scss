@@ -1,0 +1,143 @@
+@import "./mixins.scss";
+
+// @include adaptiv-font(60, 25);
+// @include adaptiv-value(width, 50, 25, 0);
+
+.wrapper-teams {
+  width: 100%;
+  margin: 0 aoto;
+}
+
+.block {
+  width: 100%;
+  margin: 0 auto;
+  /* background-color: yellow; */
+}
+
+.block-team {
+  //   width: 500px;
+  @include adaptiv-value(width, 500, 250, 0);
+  @include adaptiv-value(height, 40, 20, 0);
+  display: flex;
+  /* background-color: orange; */
+  margin: 0 auto;
+  //   font-size: 25px;
+  @include adaptiv-font(15, 8);
+  font-weight: 700;
+}
+
+.block-team-position {
+  //   width: 50px;
+  @include adaptiv-value(width, 50, 20, 0);
+  border: 1px black solid;
+  //   padding: 10px;
+  @include adaptiv-value(padding, 10, 2, 0);
+  //   margin: 3px;
+  @include adaptiv-value(margin, 3, 1, 0);
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.block-team-name {
+  //   width: 200px;
+  @include adaptiv-value(min-width, 150, 100, 0);
+  border: 1px black solid;
+  //   padding: 10px;
+  @include adaptiv-value(padding, 10, 2, 0);
+  //   margin: 3px;
+  @include adaptiv-value(margin, 3, 1, 0);
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+.block-team-value {
+  //   width: 150px;
+  @include adaptiv-value(min-width, 100, 50, 0);
+  border: 1px black solid;
+  //   padding: 10px;
+  @include adaptiv-value(padding, 10, 2, 0);
+  //   margin: 3px;
+  @include adaptiv-value(margin, 3, 1, 0);
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+.block-team-rating {
+  //   width: 150px;
+  @include adaptiv-value(width, 50, 20, 0);
+  border: 1px black solid;
+  //   padding: 10px;
+  @include adaptiv-value(padding, 10, 2, 0);
+  //   margin: 3px;
+  @include adaptiv-value(margin, 3, 1, 0);
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.block-team-logo {
+  //   width: 100px;
+  @include adaptiv-value(min-width, 40, 20, 0);
+  //   height: 60px;
+  height: auto;
+  //   @include adaptiv-value(height, 40, 20, 0);
+  border: 1px black solid;
+  //   padding: 10px;
+  //   @include adaptiv-value(padding, 10, 2, 0);
+  //   margin: 3px;
+  @include adaptiv-value(margin, 3, 1, 0);
+  object-fit: contain;
+}
+
+.block-team-goal-moment-per-game {
+  //   width: 150px;
+  @include adaptiv-value(width, 50, 20, 0);
+  border: 1px black solid;
+  //   padding: 10px;
+  @include adaptiv-value(padding, 10, 2, 0);
+  //   margin: 3px;
+  @include adaptiv-value(margin, 3, 1, 0);
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.block-team-missed-goal-moment-per-game {
+  //   width: 150px;
+  @include adaptiv-value(width, 50, 20, 0);
+  border: 1px black solid;
+  //   padding: 10px;
+  @include adaptiv-value(padding, 10, 2, 0);
+  //   margin: 3px;
+  @include adaptiv-value(margin, 3, 1, 0);
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.block-team-won-duels-procent {
+  //   width: 150px;
+  @include adaptiv-value(width, 50, 20, 0);
+  border: 1px black solid;
+  //   padding: 10px;
+  @include adaptiv-value(padding, 10, 2, 0);
+  //   margin: 3px;
+  @include adaptiv-value(margin, 3, 1, 0);
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.block-team-won-duels-procent {
+  //   width: 150px;
+  @include adaptiv-value(width, 50, 20, 0);
+  border: 1px black solid;
+  //   padding: 10px;
+  @include adaptiv-value(padding, 10, 2, 0);
+  //   margin: 3px;
+  @include adaptiv-value(margin, 3, 1, 0);
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
